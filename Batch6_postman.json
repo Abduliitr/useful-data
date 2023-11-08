@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "fd50c545-3bb2-40fd-852f-72fc83aa31ec",
+		"name": "Batch 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11609136"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5500/videos",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Abd\",\r\n    \"email\" : \"abd1@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"thumbnail\": \"thumbnail\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5500/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"abd1@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5500/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRhMDczYTEzYTZkM2M0NzU3NzQxOGIiLCJlbWFpbCI6ImFiZDFAZ21haWwuY29tIiwibmFtZSI6IkFiZCIsImlhdCI6MTY5OTM1Mjc3M30.bk9HSjz9sbyACUGvmTVcB7DUWDpB_KxbLt4qoTwgqi0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"videoId\": \"fSS_R91Nimw\",\r\n    \"url\": \"https://www.youtube.com/watch?v=fSS_R91Nimw\",\r\n    \"title\": \"Prateek Kuhad - Mulaqat (Official Music Video) | Tara Sutaria\",\r\n    \"description\": \"Hello, how are you? What a way to start the day, isn't it? A cold shower, a breakfast, a fragrant coffee. Perfect, don't you think? That's a good way, isn't it? For now, I hope you enjoy today's music, let it assist you with your morning, afternoon, or evening activities, and motivate you to keep growing.\",\r\n    \"thumbnail\": \"https://i.ytimg.com/vi/SlPhMPnQ58k/mqdefault.jpg\",\r\n    \"views\": 5,\r\n    \"likes\": 4,\r\n    \"tags\": [\"Comedy\", \"Dance\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5500/video",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"video"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5500/videos",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LikeUnlike",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRhMDczYTEzYTZkM2M0NzU3NzQxOGIiLCJlbWFpbCI6ImFiZDFAZ21haWwuY29tIiwibmFtZSI6IkFiZCIsImlhdCI6MTY5OTM1Mjc3M30.bk9HSjz9sbyACUGvmTVcB7DUWDpB_KxbLt4qoTwgqi0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5500/video/654a110a46937a48b1d9ef6e/like",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"video",
+						"654a110a46937a48b1d9ef6e",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comemnt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRhMDczYTEzYTZkM2M0NzU3NzQxOGIiLCJlbWFpbCI6ImFiZDFAZ21haWwuY29tIiwibmFtZSI6IkFiZCIsImlhdCI6MTY5OTM1Mjc3M30.bk9HSjz9sbyACUGvmTVcB7DUWDpB_KxbLt4qoTwgqi0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"I comment here\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5500/video/654a110a46937a48b1d9ef6e/comment",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"video",
+						"654a110a46937a48b1d9ef6e",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRhMDczYTEzYTZkM2M0NzU3NzQxOGIiLCJlbWFpbCI6ImFiZDFAZ21haWwuY29tIiwibmFtZSI6IkFiZCIsImlhdCI6MTY5OTM1Mjc3M30.bk9HSjz9sbyACUGvmTVcB7DUWDpB_KxbLt4qoTwgqi0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5500/user",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe or Unsubscribe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRhMDczYTEzYTZkM2M0NzU3NzQxOGIiLCJlbWFpbCI6ImFiZDFAZ21haWwuY29tIiwibmFtZSI6IkFiZCIsImlhdCI6MTY5OTM1Mjc3M30.bk9HSjz9sbyACUGvmTVcB7DUWDpB_KxbLt4qoTwgqi0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5500/user/654a073a13a6d3c47577418b/subscribe",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"user",
+						"654a073a13a6d3c47577418b",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
